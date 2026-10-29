@@ -30,6 +30,7 @@
       "types": "./wasm/index.d.ts",
       "default": "./wasm/index.js"
     },
+    "./manifest": "./public/0sfs-mod.json",
     "./package.json": "./package.json"
   },
   "devDependencies": {

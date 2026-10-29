@@ -48,6 +48,11 @@ and fast flight need no gain schedule.
 
 ## Use
 
+This is the component mod `0sfs/multirotor` (`public/0sfs-mod.json`). The
+`0SFS/Quadcopter` mod depends on it, so every drone in the default modpack
+brings it in. The local package is `@0sfs/multirotor`; the drone feature
+imports it lazily after a drone is applied.
+
 ```ts
 import { createAirframe } from "@0sfs/multirotor/airframe";
 import { createMultirotor } from "@0sfs/multirotor/multirotor";
