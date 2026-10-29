@@ -1,0 +1,38 @@
+{
+  "name": "@0sfs/multirotor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multirotor flight for 0SFS: rotor plant down to the spinning propeller, and a velocity-command flight controller.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "exports": {
+    "./airframe": {
+      "source": "./src/airframe.ts",
+      "default": "./src/airframe.ts"
+    },
+    "./flightController": {
+      "source": "./src/flightController.ts",
+      "default": "./src/flightController.ts"
+    },
+    "./layout": {
+      "source": "./src/layout.ts",
+      "default": "./src/layout.ts"
+    },
+    "./multirotor": {
+      "source": "./src/multirotor.ts",
+      "default": "./src/multirotor.ts"
+    },
+    "./rotorPlant": {
+      "source": "./src/rotorPlant.ts",
+      "default": "./src/rotorPlant.ts"
+    },
+    "./wasm": {
+      "types": "./wasm/index.d.ts",
+      "default": "./wasm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "vitest": "4.1.6"
+  }
+}

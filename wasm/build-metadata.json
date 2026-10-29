@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "core": "multirotor",
+  "abiVersion": 1,
+  "rust": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)",
+  "optimizer": "wasm-opt version 132",
+  "node": "26.9.0",
+  "target": "wasm32-unknown-unknown",
+  "build": {
+    "command": [
+      "cargo",
+      "+stable",
+      "build",
+      "-p",
+      "multirotor",
+      "--release",
+      "--locked",
+      "--offline",
+      "--target",
+      "wasm32-unknown-unknown"
+    ],
+    "rustflags": "-C target-feature=+simd128 -C link-arg=--max-memory=33554432",
+    "optimize": [
+      "wasm-opt",
+      "-O3",
+      "--enable-simd",
+      "--strip-debug"
+    ]
+  },
+  "inputs": {
+    "Cargo.lock": "f9add6f61a3e892ee03042f08851657df47e3e4d29988547a9aaca5c3eb1468a",
+    "Cargo.toml": "904b49bee3e517c1c9947f19cd43e88af99695b0ebd2d52da14a33ba4f7d8659",
+    "crates/multirotor/Cargo.toml": "aa2470e70a9b16caf062518080f53547ac1e280a17a1f0b706f16387ddccfa03",
+    "crates/multirotor/src/control.rs": "a6fbc51e51559d6c12c2c6bbe3a800d1f612e8be753000de6853b5f085aac53d",
+    "crates/multirotor/src/lib.rs": "d0a75d9a72284a79b22015606172676cda592931e93a66faeb16458ae9ad71d0",
+    "crates/multirotor/src/plant.rs": "aabee23128fecd7b8a5741ccc165de59d454a14c8696cdf98dc1a40cabdb0d75",
+    "index.d.ts": "e2e2174bb8ba72b1c9ece235295b3f633860aba398320504f249ac490e774093",
+    "index.js": "3dafe3c7c5fd209403b8f515399348d328ebf389dcc7d7c75bfebf8a5ff24a09",
+    "rust-toolchain.toml": "ef4d1f56bd8d2d2644df4c2c5786dc149046cd43048f4550420d77a8829f9e53",
+    "scripts/build.mjs": "1db466d3d04570f98d809e17dd01a75e393e6f3da0cd3f2a738a535380eef1c1",
+    "toolchain.lock.json": "64ca8139f235c792b5098258df38cc9dd007423f7a3390f6aff7c5cd5d02ec07"
+  },
+  "outputs": {
+    "single/multirotor.wasm": {
+      "sha256": "db305e42936a2964255207d906bf64ed26ad9e84f4648bca4c966e80a51baff9",
+      "bytes": 29999
+    }
+  },
+  "threaded": false,
+  "functionality": "build receipt only; parity evidence comes from scripts/check.mjs",
+  "performance": "unmeasured",
+  "power": "unmeasured"
+}
