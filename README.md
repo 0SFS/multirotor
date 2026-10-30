@@ -74,6 +74,8 @@ The fly app depends on this package and runs its tests. From the `fly`
 directory, `npm test` includes them. `tests/rigidBody.ts` is a minimal flat-earth
 rigid body that stands in for JSBSim, so the closed loop can be tested here.
 
+Topics: `0sfs-mod` and `0sfs-component-mod`. [Modding guide](https://github.com/0SFS/docs/blob/main/modding.md) describes discovery and installation.
+
 ## Community
 
 - [Code of conduct](https://github.com/0SFS/.github/blob/main/CODE_OF_CONDUCT.md)
